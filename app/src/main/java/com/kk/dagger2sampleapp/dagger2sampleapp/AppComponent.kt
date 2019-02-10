@@ -6,6 +6,6 @@ import dagger.Component
 // モジュールからProvideされるインスタンスをどこに注入するか指定する
 // ここではMainViewModelがProvideされてMainActivityに注入
 @Component(modules = [ViewModelModule::class, RepositoryModule::class])
-interface MainActivityComponent {
+interface AppComponent {
     fun inject(activity: MainActivity)
 }

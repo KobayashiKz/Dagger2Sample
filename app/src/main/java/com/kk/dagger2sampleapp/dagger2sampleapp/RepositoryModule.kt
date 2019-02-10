@@ -8,7 +8,9 @@ import dagger.Provides
 @Module
 class RepositoryModule {
     @Provides
-    fun provideGreetingRepository(): GreetingRepository {
+    // モジュールの依存先の型をインターフェースにしておく
+    // テスト時の依存先の変更が容易になる
+    fun provideGreetingRepository(): GreetingReposioryContract {
         return GreetingRepository()
     }
 }

@@ -8,7 +8,8 @@ import dagger.Provides
 @Module
 class ViewModelModule {
     @Provides
-    fun provideMainViewModel(greetingRepository: GreetingRepository): MainViewModel {
+    fun provideMainViewModel(greetingRepository: GreetingRepository)
+            : MainViewModelContract {
         return MainViewModel(greetingRepository)
     }
 }
